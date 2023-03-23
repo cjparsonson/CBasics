@@ -9,15 +9,16 @@ int main(void) {
 
     
     while ((c = getchar()) != EOF) {
-        if (c != ' ') {
-            putchar(c);
-        }
-        if (c == ' ') {
-            putchar(c);
-            while ((c = getchar()) == ' ') {
-                        
+            if (c == ' ') {
+                putchar(c);
+                while ((c = getchar()) == ' ') {
+                ++count;        
             }
         }
+            if (c != ' ') {
+                putchar(c);
+        }
+
 
     }
 
