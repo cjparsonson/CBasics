@@ -4,7 +4,7 @@
 #define NONBLANK 'a'
 
 int main(void) {
-    int c, last_c, count;
+    int c, last_c, count, removed;
 
     last_c = NONBLANK;
     count = 0;
@@ -17,10 +17,14 @@ int main(void) {
             if (last_c != ' ') {
                 putchar(c);
             }
+            else {
+                removed++;
+            }
         }
         last_c = c;
     }
     printf("Blanks counted: %d\n", count);
+    printf("Blanks removed: %d\n", removed);
     return EXIT_SUCCESS;
 }
 
