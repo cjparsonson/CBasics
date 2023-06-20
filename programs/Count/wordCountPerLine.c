@@ -23,7 +23,9 @@ int main(void) {
         } else if (state == OUT) {
             state = IN;
             ++nw;
+            putchar('\n');
         }
+        putchar(c);
     }
     printf("Lines Words Chars\n");
     printf("%d     %d     %d\n", nl, nw, nc);
